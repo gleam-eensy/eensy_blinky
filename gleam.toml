@@ -1,0 +1,16 @@
+name = "eensy_blinky"
+version = "0.1.0"
+gleam = ">= 1.4.0"
+
+[dependencies]
+eensy = { path = "../../packages/eensy" }
+gleam_stdlib = ">= 0.40.0 and < 1.0.0"
+gleam_erlang = ">= 0.26.0 and < 1.0.0"
+
+[dev-dependencies]
+gleeunit = ">= 1.0.0 and < 2.0.0"
+eensy_dev_tools = { path = "../../packages/eensy_dev_tools" }
+
+[eensy]
+platform = "esp32"
+port = "/dev/tty.usbserial-0001"
