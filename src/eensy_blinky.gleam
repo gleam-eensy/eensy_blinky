@@ -1,11 +1,10 @@
 import eensy.{Up, get_system_platform}
-
-import gleam/option.{None, Some}
-import gleam/result
-
 import eensy/gpio.{type Level, High, Low}
 import eensy/store
 import gleam/erlang/process
+import gleam/io
+import gleam/option.{None, Some}
+import gleam/result
 
 // Model -----------------------------------------------------------------------
 
@@ -16,7 +15,10 @@ pub type Model {
 // Start -----------------------------------------------------------------------
 
 pub fn start() -> Nil {
-  let _ = do_start()
+  case do_start() {
+    Ok(_) -> io.print("Started")
+    Error(_) -> io.print("Failed")
+  }
   process.sleep_forever()
 }
 
