@@ -3,7 +3,7 @@ import eensy/gpio.{type Level, High, Low}
 import eensy/store
 import gleam/erlang/process
 import gleam/io
-import gleam/option.{None, Some}
+import gleam/option.{None}
 import gleam/result
 
 // Model -----------------------------------------------------------------------

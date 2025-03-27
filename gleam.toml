@@ -14,3 +14,4 @@ eensy_dev_tools = { path = "../../packages/eensy_dev_tools" }
 [eensy]
 platform = "esp32"
 port = "/dev/tty.usbserial-0001"
+prune = true
